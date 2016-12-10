@@ -5,7 +5,7 @@ def check_dup():
     f = open('imgo.txt', 'r')  # Google Spread Sheet download with tsv, save as with txt(same contents)
     txt = f.read()
     rule = re.compile('\d{8}') # Get elements consist of 8 digit numbers
-    result = rule.search(txt)
+    result = rule.findall(txt)
     
     counter = collections.Counter(result)
     
